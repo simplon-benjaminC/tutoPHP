@@ -1,0 +1,64 @@
+!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PDO MYSQL</title>
+  <link rel="stylesheet" href="tuto.css">
+  <h1>PDO MYSQL</h1>
+</head>
+<body>
+	<p><mark>PDO= Php Data Objet</mark></p>
+	<h2>PDO MYSQL</h2>
+	<p>Ceci permet à <mark>PHP</mark> d'avoir accès à une base de données MYSQL.</p>
+	<p>Exemple: 
+		<pre>
+			&lt;?php 
+			$bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 'root');
+			?&gt;
+		</pre>
+	<p>Pour donner l'accès vers la base de donnée à <mark>PHP</mark>, on créé la variable $bdd pour sauvegarder le chemin d'accès avec les informations d'authentification.</p>
+	<p>Pour effectuer une requette mysql sur la base de donées, afin de "lire" les informations présentes sur la base de données nommées précédemment $bdd, nous faison appels à cette synxtaxe : </p>
+	<pre>
+		&lt;?php
+		$bdd->query('SELECT * FROM jeux_video');
+		?&gt;
+	</pre>
+
+<p>On crée la variable $reponse pour sauvegarder le chemin d'accès + authentification, vers la base de données ($bdd), on indique que l'on souhaite faire une requête avec "query", puis une fois dans la base de données, on sélectionne les colonnes <mark>(SELECT)</mark> depuis la "table" nommée "jeux_vidéo" <mark>(FROM)</mark></p>
+	<h4>MY SQL</h4>
+	<p>C'est un sytème de gestion de base de données.On peut l'utiliser seul ou le combiner avec un autre language de programmation tel que , Java, Python...
+		<p>On l'utilise avec des formulaires d'inscription ou de contact.
+		</p>
+		<pre>
+			&lt;?php
+		$bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 'root');
+		?&gt;
+	</pre>
+
+Pour donnée l'accès vers la base de donnée à <mark>PHP</mark>
+
+On créé la variable $bdd pour sauvegarde le chemin d'accès avec les informations d'authentification</p>
+
+<pre>
+	&lt;?php
+$reponse = $bdd->query('SELECT * FROM jeux_video');
+?&gt;
+</pre>
+Pour effectuer une requette mysql sur la base afin de "lire" les informations présent sur la base de données nommées précédemment $bdd
+
+On crée la variable $reponse pour sauvegarder le chemin d'accès + authentification vers la base de données ($bdd), on indique que l'on souhaite faire une requête avec "query", puis une fois dans la base de données, sélectionner les colonnes (SELECT) depuis la "table" nommé "jeux_vidéo" <mark>(FROM)</mark>.
+		</p>
+		<img src="images/img1.png"/>
+		 <p>On selectionne <mark>(SELECT)</mark> dans le champ "reference" et"intitule" depuis <mark>(FROM)</mark> la table "articles" et "familles" dans le champs <mark>(WHERE)</mark> familleID et ID du famille ID=ID.
+        On selectionne <mark>(SELECT)</mark> tout les champs (*) depuis <mark>(FROM)</mark> la table "articles" par ordre <mark>(ORDER BY)</mark> de "prix" descendant <mark>(DESC)</mark>.
+        On selectionne <mark>(SELECT)</mark> tout les champs (*) depuis <mark>(FROM)</mark> la table "articles" et on limite (LIMIT) l'affichage à 2 lignes (LIMIT 2)
+        Insert dans <mark>(INSERT INTO)</mark>  la table "articles" ,  dans le champs <mark>(SET)</mark> reference la chaine de caractères "TYU43" (reference="TYU43"), et (,) dans le champs prix l'int "200" (prix=200), et dans le champs description.</p>
+        <p>La chaine de caractères "Micro de guitare" <mark>(description="Micro de Guitare")</mark> , indique que ce genre d'article ira dans la famille 2 (car c'est un accessoire).</p>
+
+        <img src="images/img2.png"/>
+        <p>Mets à jour <mark>(UPDATE)</mark> dans la table "articles",   le champ <mark>(SET)</mark> "prix"  et modifie le par l'INT 400 (prix=400) dans le champ "reference" qui contient "TYU43"(reference=TYU43).</p>
+        <img src="images/img3.png"/>
+
+        <p>Supprime <mark>(DELETE)</mark> depuis <mark>(FROM)</mark> la table "article"à partir du  champs <mark>(WHERE)</mark> "reference" la ligne indiqué "TYU43" (reference="TYU43").</p>
+</body>
+</html>
