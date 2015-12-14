@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -7,6 +7,21 @@
   <h1>PDO MYSQL</h1>
 </head>
 <body>
+	<style>
+	h1{
+	text-align: center;
+	color: #5E45A6;
+}
+
+h2{
+	text-align: center;
+	color:  #313C91;
+}
+h4{
+	text-align: center;
+	color: #7325D9;
+}
+</style>
 	<p><mark>PDO= Php Data Objet</mark></p>
 	<h2>PDO MYSQL</h2>
 	<p>Ceci permet à <mark>PHP</mark> d'avoir accès à une base de données MYSQL.</p>
